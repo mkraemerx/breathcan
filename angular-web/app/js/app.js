@@ -18,4 +18,6 @@ angular.module('breathcan-web', [])
 
 		$scope.$watch('bc.tank', $scope.calculate);
 		$scope.$watch('bc.depth', $scope.calculate);
+
+		//$('#resultBox').tooltip({});
 	}]);
