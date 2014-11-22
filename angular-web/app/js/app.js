@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('breathcan-web', [])
-	.controller('MainCtrl', ['$scope', function($scope) {
+	.controller('MainCtrl', ['$scope', '$document', function($scope) {
 		var bc = {
 			depth: 30,
 			tank: 12
@@ -19,5 +19,4 @@ angular.module('breathcan-web', [])
 		$scope.$watch('bc.tank', $scope.calculate);
 		$scope.$watch('bc.depth', $scope.calculate);
 
-		//$('#resultBox').tooltip({});
 	}]);
