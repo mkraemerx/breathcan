@@ -6,7 +6,8 @@ var mainMod = angular.module('breathcan-web', []);
 mainMod.controller('MainCtrl', ['$scope', function($scope) {
 	var bc = {
 		depth: 30,
-		tank: 12
+		tank: 12,
+		appVersion : "0.0.004"
 	};
 	$scope.bc = bc;
 
