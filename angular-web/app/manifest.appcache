@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# Version: 004
+
+CACHE:
+index.html
+css/app.css
+js/app.js
+bower_components/angular/angular.js
+bower_components/angular/angular.min.js
+bower_components/angular/angular.min.js.map
+bower_components/bootstrap/dist/js/bootstrap.js
+bower_components/bootstrap/dist/css/bootstrap.css
+bower_components/bootstrap/dist/css/bootstrap.css.map
+bower_components/bootstrap/dist/css/bootstrap.min.css
+http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+
+NETWORK:
+*
