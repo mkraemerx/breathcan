@@ -41,14 +41,22 @@
         </div>
         <div class="panel-body">
           <div class="row br-row">
-            <span class="col-xs-6 col-sm-2">Your tank size:</span> <span class="col-xs-4 col-sm-2"><input type="number" id="tankSlider" value="12" ng-model="bc.tank" class="form-control" /></span>
+            <span class="col-xs-6 col-sm-2">Your tank size</span>
+            <div class="input-group col-xs-5 col-sm-2">
+                <input type="number" pattern="[0-9]*" id="tankSlider" class="form-control" value="12" ng-model="bc.tank" />
+                <span class="input-group-addon">liters</span>
+            </div>
           </div>
           <div class="row br-row">
-            <span class="col-xs-6 col-sm-2">Your maximum depth:</span> <span class="col-xs-4 col-sm-2"><input type="number" id="depthSlider" value="30" ng-model="bc.depth" class="form-control" /></span>
+            <span class="col-xs-6 col-sm-2">Your maximum depth</span>
+            <div class="input-group col-xs-5 col-sm-2">
+              <input type="number" pattern="[0-9]*" id="depthSlider" value="30" ng-model="bc.depth" class="form-control" />
+                <span class="input-group-addon">meters</span>
+            </div>
           </div>
           <div class="row distance-row">
-            <h4 class="col-xs-6 col-sm-2">Your minimum gas is </h4>
-            <h4 class="col-xs-6 col-sm-4"><span id="resultBox" class="label label-primary" data-toggle="tooltip" data-placement="bottom" title data-original-title="ascent time: {{bc.ascentTime}} - minimum gas (liters at surface pressure): {{bc.minimumGas}}" >{{bc.minimumGasPressure}} bars</span></h4>
+            <h4 class="col-xs-6 col-sm-2">Your minimum gas </h4>
+            <h4 class="col-xs-6 col-sm-4"><span id="resultBox" class="label label-primary" data-toggle="tooltip" data-placement="bottom" title data-original-title="ascent time: {{bc.ascentTime}} minutes /// minimum gas : {{bc.minimumGas}} (liters at surface pressure)" >{{bc.minimumGasPressure}} bars</span></h4>
           </div>
         </div>  
       </div>
