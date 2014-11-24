@@ -1,0 +1,13 @@
+{
+  "name": "breathcan-angular-web",
+  "description": "calculate how much air you need to ascend from a given depth in recreational diving",
+  "version": "0.1.0",
+  "homepage": "http://mkraemerx.github.io/breathcan/",
+  "license": "Apache-2.0",
+  "private": false,
+  "dependencies": {
+    "knockout": "3.2.x",
+    "bootstrap": "~3.1.1",
+    "jquery": "2.1.x"
+  }
+}

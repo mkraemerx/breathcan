@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" manifest="manifest.appcache">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ko breathcan web simple</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/knockout/dist/knockout.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Breathcan</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </nav>
+  <div class="view-container container-fluid" >
+    <div ng-view class="view-frame">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">How much air do you need?</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row br-row">
+            <span class="col-xs-6 col-sm-2">Your tank size</span>
+            <div class="input-group col-xs-5 col-sm-2">
+                <input type="number" pattern="[0-9]*" id="tankSlider" data-bind="value: tank" class="form-control" />
+                <span class="input-group-addon">liters</span>
+            </div>
+          </div>
+          <div class="row br-row">
+            <span class="col-xs-6 col-sm-2">Your maximum depth</span>
+            <div class="input-group col-xs-5 col-sm-2">
+              <input type="number" pattern="[0-9]*" id="depthSlider" data-bind="value: depth" class="form-control" />
+                <span class="input-group-addon">meters</span>
+            </div>
+          </div>
+          <div class="row distance-row">
+            <h4 class="col-xs-6 col-sm-2">Your minimum gas </h4>
+            <h4 class="col-xs-6 col-sm-4"><span id="resultBox" class="label label-primary" data-bind="text: minimumGasPressure" ></span></h4>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">$(function () {
+      $( document ).ready(function() {
+        console.log( "document loaded" );
+        $('#resultBox').tooltip();
+      });    
+    })
+  </script>
+</body>
+</html>
